@@ -10,29 +10,49 @@ dotenv.config();
 connectDB();
 
 // Datos ficticios
-const movies = [
+const peliculas = [
 	{
-		title: "Avengers: Endgame",
-		description:
-			"Los Vengadores se unen para derrotar a Thanos y restaurar el universo.",
-		price: 12.5,
-		availableSeats: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+	  title: "Capitán América: Un Nuevo Mundo",
+	  description: "Tras reunirse con el recién elegido presidente de Estados Unidos, Sam se encuentra en medio de un incidente internacional y debe descubrir la razón detrás de un complot global antes de que el mundo entero entre en caos.",
+	  price: 12.5,
+	  director: "Julius Onah",
+	  year: "2025",
+	  screen: "Sala 1"
 	},
 	{
-		title: "Spider-Man: No Way Home",
-		description:
-			"Peter Parker enfrenta las consecuencias de su identidad revelada y busca ayuda en el Doctor Strange.",
-		price: 10.0,
-		availableSeats: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+	  title: "El Brutalista",
+	  description: "La vida del visionario arquitecto László Toth, quien huye de la Europa de posguerra y llega a Estados Unidos para reconstruir su vida, su obra y su matrimonio.",
+	  price: 11.0,
+	  director: "Brady Corbet",
+	  year: "2025",
+	  screen: "Sala 2"
 	},
 	{
-		title: "Inception",
-		description:
-			"Un ladrón que roba secretos a través de los sueños es contratado para implantar una idea.",
-		price: 11.0,
-		availableSeats: [21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+	  title: "Attack on Titan: El Ataque Final",
+	  description: "El destino del mundo pende de un hilo cuando Eren desata el poder definitivo de los Titanes, dirigiendo un ejército imparable hacia Marley.",
+	  price: 10.0,
+	  director: "Yûichirô Hayashi",
+	  year: "2025",
+	  screen: "Sala 3"
 	},
-];
+	{
+	  title: "Flow",
+	  description: "Un gato se encuentra en un mundo cubierto de agua y, en su búsqueda de refugio, se une a un barco con animales de otras especies, enfrentando desafíos para superar sus diferencias.",
+	  price: 9.5,
+	  director: "Gints Zilbalodis",
+	  year: "2025",
+	  screen: "Sala 4"
+	},
+	{
+	  title: "Operación Panda",
+	  description: "Una superestrella internacional de la acción y su asistente participan en una operación de rescate transnacional del misterioso protagonista P.",
+	  price: 8.0,
+	  director: "Luan Zhang",
+	  year: "2025",
+	  screen: "Sala 5"
+	}
+  ];
+  
 
 // Función para poblar la base de datos
 const seedDatabase = async () => {

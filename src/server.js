@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import movieRoutes from "./routes/movieRoutes.js";
 import ticketRoutes from "./routes/ticketRoutes.js";
+console.log("🔍 MONGO_URI:", process.env.MONGO_URI);
 
 // Cargar variables de entorno
 dotenv.config();
