@@ -1,15 +1,15 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-const connectDB = async () => {
+dotenv.config();
+
+export const connectDB = async () => {
 	try {
-		await mongoose.connect(process.env.MONGO_URI, {
-			useNewUrlParser: true,
-			useUnifiedTopology: true,
-		});
-		console.log("✅ Conectado a la base de datos MongoDB");
-	} catch (error) {
-		console.error("❌ Error conectando a MongoDB:", error.message);
-		process.exit(1);
+		const conn = await mongoose.connect(process.env.MONGO_URI);
+		console.log(`MongoDB Connected: ${conn.connection.host}`);
+	} catch (err) {
+		console.error(`Error: ${err.message}`);
+		process.exit(1); // process code 1 code means exit with failure, o means success
 	}
 };
 

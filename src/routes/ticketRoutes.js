@@ -6,7 +6,7 @@ import {
 
 const router = express.Router();
 
-router.post("/pay", createTicket);
-router.get("/ticket/:ticket_id", getTicketById);
+router.post("/", createTicket);
+router.get("/:id", getTicketById);
 
 export default router;
