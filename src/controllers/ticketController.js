@@ -6,10 +6,14 @@ export const createTicket = async (req, res) => {
 	try {
 		const { username, movieId, date, time, tickets, seats } = req.body;
 
+		console.log("movie ID", movieId)
+
 		const movie = await Movie.findById(movieId);
 		if (!movie)
 			return res.status(404).json({ message: "Película no encontrada" });
 
+		console.log("PELICULA ENCONTRADA", movie);
+		
 		const totalPrice = movie.price * tickets;
 
 		const newTicket = new Ticket({
