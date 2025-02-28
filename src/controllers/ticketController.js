@@ -4,7 +4,7 @@ import Movie from "../models/Movie.js";
 // Crear un ticket
 export const createTicket = async (req, res) => {
 	try {
-		const { username, movieId, date, time, tickets, seats } = req.body;
+		const { userName, userEmail, movieId, date, time, tickets, seats } = req.body;
 
 		console.log("movie ID", movieId)
 
@@ -17,7 +17,8 @@ export const createTicket = async (req, res) => {
 		const totalPrice = movie.price * tickets;
 
 		const newTicket = new Ticket({
-			username,
+			userName,
+			userEmail,
 			movieTitle: movie.title,
 			date,
 			time,

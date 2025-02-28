@@ -10,8 +10,8 @@ connectDB();
 const app = express();
 app.use(express.json());
 
-app.use("/api/movies", movieRoutes);
-app.use("/api/tickets", ticketRoutes);
+app.use("/api/movie", movieRoutes);
+app.use("/api/ticket", ticketRoutes);
 
 app.get("/", (req, res) => {
 	res.send("API de Cine funcionando 🚀");
