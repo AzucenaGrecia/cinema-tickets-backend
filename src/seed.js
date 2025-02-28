@@ -10,7 +10,7 @@ dotenv.config();
 connectDB();
 
 // Datos ficticios
-const peliculas = [
+const movies = [
 	{
 	  title: "Capitán América: Un Nuevo Mundo",
 	  description: "Tras reunirse con el recién elegido presidente de Estados Unidos, Sam se encuentra en medio de un incidente internacional y debe descubrir la razón detrás de un complot global antes de que el mundo entero entre en caos.",
